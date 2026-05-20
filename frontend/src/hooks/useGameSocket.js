@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback } from 'react'
 
-const WS_URL = 'ws://localhost:8000/ws'
+const WS_URL = import.meta.env.VITE_WS_URL || 'ws://localhost:8000/ws'
 
 export function useGameSocket() {
   const wsRef = useRef(null)
